@@ -1,11 +1,14 @@
+# reload host
 simple POSIX platform live code reloading
 
-=== USAGE ===
+## USAGE
+```
 $ reloadhost <your_shared_library> [argv...]
+```
 
-=== CLIENT ===
+## CLIENT
 Your target application will need to support the reloadhost. A simple example:
-
+```c
 #include "reloadhost.h"
 
 // all of your heap allocated application state
@@ -80,3 +83,4 @@ int RH_ENTRY_NAME(
     loop();
     return 0;
 }
+```
